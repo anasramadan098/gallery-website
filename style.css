@@ -1,0 +1,225 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+}
+a {
+    text-decoration: none;
+}
+body {
+    position: relative;
+}
+/* Start Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 30px 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    z-index: 1000;
+}
+header img {
+    width: 200px;
+    height: 150px;
+}
+header .content {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 90px;
+}
+header .links li {
+    text-transform: uppercase;
+    cursor: pointer;
+    color: chocolate;
+    font-size: 12px;
+    transition: .3s;
+}
+header .links li:hover {
+    color: #000;
+}
+header .social {
+    gap: 30px;
+}
+header .social a {
+    color: chocolate;
+    font-size: 12px;
+}
+/* End Header */
+/* Start Main Section */
+.main {
+    min-height: 95vh;
+    background: url(./imgs/Main.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 200px 0 0;
+}
+.main img.event {
+    cursor: pointer;
+}
+/* End Main Section */
+/* Start Footer */
+footer {
+    height: calc(100vh - 95vh);
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+}
+footer span.date {
+    color:brown;
+}
+/* End Footer */
+/* Start Gallery Box */ 
+.img-container .x {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+.img-container {
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    padding: 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+/* End Gallery Box */ 
+/* Start About Us */
+div.about-us {
+    display: none;
+    padding-bottom: 30px;
+    background: #ddd;
+    text-align: center;
+    margin: 0 50px;
+    overflow: scroll;
+    overflow-x: hidden;
+    max-height: 600px;
+}
+div.about-us img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+div.about-us h3 {
+    font-style: italic;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+div.about-us p {
+    padding: 0 20px ;
+    color: #777;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+.main div.active {
+    display: block;
+}
+.img-container.active,
+.main div.d-flex {
+    display: flex;
+}
+/* End About Us */
+/* Start Contacu Us */
+div.contact-us {
+    display: none;
+    margin: 0 50px;
+    border-radius: 6px;
+    max-height: 600px;
+    /* overflow: scroll; */
+}
+.contact-us img {
+    max-width: 50%;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+.contact-us .boxes {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    width: 50%;
+    background-color: #f0efef9f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0;
+}
+.contact-us .box {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    flex-direction: column;
+    width: 80%;
+    margin: 10px 20px;
+    border: thin solid silver;
+    background: silver;
+    padding: 20px;
+}
+.contact-us .box i {
+    color: #606060;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 2em;
+}
+.contact-us .box p {
+    color: #606060;
+    font-size: 14px;
+}
+/* End Contacu Us */
+/* Start Colletion  */
+div.collection,
+div.TABLESCAPES {
+    max-height: 600px;
+    background-color: #f0efef9f;
+    overflow: scroll;
+    overflow-x: hidden;
+    display: none;
+}
+div.collection .toolbar{
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+div.collection .toolbar span {
+    cursor: pointer;
+    padding: 8px 10px;
+    background-color: #d2a64e;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 14px;
+    transition: .3s;
+}
+div.collection .toolbar span.active,
+div.collection .toolbar span:hover {
+    background-color: #96732c;
+}
+div.collection .imgs,
+div.TABLESCAPES .imgs{
+    padding: 10px 60px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:20px;
+}
+div.collection .imgs img,
+div.TABLESCAPES .imgs img{
+    max-width: calc(100% / 4 - 20px);
+}
+/* End  Colletion  */

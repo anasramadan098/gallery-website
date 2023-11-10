@@ -249,7 +249,7 @@ div.TABLESCAPES .imgs{
 div.collection .imgs img,
 div.TABLESCAPES .imgs img{
     cursor: pointer;
-    max-width: calc(100% / 4 - 20px);
+    max-width: 30%;
     box-shadow: 1px 1px 6px 2px #00000042;
     padding: 6px;
     transition: .3s;

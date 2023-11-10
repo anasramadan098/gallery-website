@@ -7,15 +7,15 @@ const x = document.querySelector('.img-container .x');
 
 x.addEventListener('click',function() {
     imgContainer.classList.remove('active');
-    document.querySelector('.img-container img').remove();
+    document.querySelector('.img-container .img img').remove();
 });
 
 // Add Click On All Imgs That Have Uniqe Class
-document.querySelectorAll('img.event').forEach(img => {
+document.querySelectorAll('.imgs img').forEach(img => {
     img.addEventListener('click',() => {
         const imgElement = document.createElement('img');
         imgElement.src = img.src;
-        imgContainer.appendChild(imgElement);
+        document.querySelector('.img-container .img').appendChild(imgElement);
         imgContainer.classList.add('active');
     })
 })
@@ -51,7 +51,7 @@ const filterElemetns = document.querySelectorAll('.collection .toolbar span');
 filterElemetns.forEach(e => {
     e.addEventListener('click' , () => {
         // Filter The Imgs
-        filterImgsFrom(e.innerHTML);
+        filterImgsFrom(e.className);
     })
 })
 
@@ -59,9 +59,24 @@ filterElemetns.forEach(e => {
 
 function filterImgsFrom(categoriesName) {
     document.querySelectorAll('.collection img').forEach(img => {
-        if ( img.dataset.category == categoriesName) {
-            document.querySelector('.collection .imgs').innerHTML += img
+        // Remove The Active Class
+        img.classList.remove('active');
+        
+        
+        if ( img.getAttribute('data-category') == categoriesName) {
+            img.classList.add('active');
         }
+        //  Check If It All Category
+        if (categoriesName == 'all') {
+            img.classList.add('active')
+        }
+
     })
     
 }
+
+
+// // Get Mouse Event
+// document.addEventListener('mousemove' , (e) => {
+//     document.querySelector('.main').style.backgroundPosition = '-' + e.clientX +'px'
+// })

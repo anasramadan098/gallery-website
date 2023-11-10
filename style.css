@@ -64,7 +64,7 @@ header .social a {
 /* Start Main Section */
 .main {
     min-height: 95vh;
-    background: url(./imgs/Main.jpg);
+    background: url(./imgs/bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     padding: 200px 0 0;

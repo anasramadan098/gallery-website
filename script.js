@@ -1,5 +1,3 @@
-// Change Footer Date Span
-document.querySelector('footer span.date').innerHTML = new Date().getFullYear();
 
 // Add Click On ( X ) To Close The img-container
 const imgContainer = document.querySelector('.img-container');
@@ -44,36 +42,52 @@ links.forEach(link => {
 
 
 
-// Filter The Categories
-const filterElemetns = document.querySelectorAll('.collection .toolbar span');
+// Create Imgs
 
+// Set Holder
+const holder = document.querySelector('.collection .imgs')
 
-filterElemetns.forEach(e => {
-    e.addEventListener('click' , () => {
-        // Filter The Imgs
-        filterImgsFrom(e.className);
-    })
-})
-
-
-
-function filterImgsFrom(categoriesName) {
-    document.querySelectorAll('.collection img').forEach(img => {
-        // Remove The Active Class
-        img.classList.remove('active');
-        
-        
-        if ( img.getAttribute('data-category') == categoriesName) {
-            img.classList.add('active');
-        }
-        //  Check If It All Category
-        if (categoriesName == 'all') {
-            img.classList.add('active')
-        }
-
-    })
-    
+// Loop
+for (let i = 1; i <= 16; i++ ) {
+    const img = document.createElement('img');
+    const imgData = ''
+    img.src = `imgs/gallery-${i}.jpg`;
+    img.alt = `gallery img-${i}`;
+    img.classList.add('active');
+    holder.append(img)
 }
+
+
+// // Filter The Categories
+// const filterElemetns = document.querySelectorAll('.collection .toolbar span');
+
+
+// filterElemetns.forEach(e => {
+//     e.addEventListener('click' , () => {
+//         // Filter The Imgs
+//         filterImgsFrom(e.className);
+//     })
+// })
+
+
+
+// function filterImgsFrom(categoriesName) {
+//     document.querySelectorAll('.collection img').forEach(img => {
+//         // Remove The Active Class
+//         img.classList.remove('active');
+        
+        
+//         if ( img.getAttribute('data-category') == categoriesName) {
+//             img.classList.add('active');
+//         }
+//         //  Check If It All Category
+//         if (categoriesName == 'all') {
+//             img.classList.add('active')
+//         }
+
+//     })
+    
+// }
 
 
 // // Get Mouse Event

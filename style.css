@@ -63,7 +63,7 @@ header .social a {
 /* End Header */
 /* Start Main Section */
 .main {
-    min-height: 95vh;
+    min-height: 100vh;
     background: url(./imgs/bg.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -137,7 +137,7 @@ div.about-us {
     max-height: 600px;
 }
 div.about-us img {
-    width: 100%;
+    width: 95%;
     margin-bottom: 20px;
 }
 div.about-us h3 {

@@ -80,6 +80,9 @@ header .social a {
     max-width: 60%;
     border-radius: 15px;
 }
+.main img.home.hide {
+    display: none;
+}
 /* End Main Section */
 /* Start Footer */
 footer {

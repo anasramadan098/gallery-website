@@ -29,7 +29,10 @@ links.forEach(link => {
     // Add Click Event
     link.addEventListener('click', () => {
         // Remove Class Active From All Div's
-        document.querySelectorAll('.main div').forEach(div =>  div.classList.remove('active','d-flex'));
+        document.querySelectorAll('.main div').forEach(div =>  { 
+            div.classList.remove('active','d-flex')
+            document.querySelector('.main img.home').className = 'home hide'
+        });
         if (link.className == 'contact-us') {
             // Add Class Active To The Current Div
             document.querySelector(`.main div.${link.className}`).classList.add('d-flex');

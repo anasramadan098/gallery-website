@@ -47,16 +47,6 @@ links.forEach(link => {
 // Set Holder
 const holder = document.querySelector('.collection .imgs')
 
-// Loop
-for (let i = 1; i <= 16; i++ ) {
-    const img = document.createElement('img');
-    const imgData = ''
-    img.src = `imgs/gallery-${i}.jpg`;
-    img.alt = `gallery img-${i}`;
-    img.classList.add('active');
-    holder.append(img)
-}
-
 
 // // Filter The Categories
 // const filterElemetns = document.querySelectorAll('.collection .toolbar span');
